@@ -1,0 +1,499 @@
+/* ===========================================================
+   MedIntel AI - Global Theme
+=========================================================== */
+:root {
+    --primary: #2563EB;
+    --primary-hover: #1D4ED8;
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+    --background: #0F172A;
+    --card: #1E293B;
+    --border: #334155;
+    --text: #F8FAFC;
+    --muted: #CBD5E1;
+    --radius: 16px;
+}
+
+/* ===========================================================
+   Main Application
+=========================================================== */
+.stApp {
+    background: var(--background);
+    color: var(--text);
+}
+
+/* ===========================================================
+   Main Container
+=========================================================== */
+.block-container {
+    max-width: 1400px !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+    margin: auto !important;
+}
+
+/* ===========================================================
+   Sidebar
+=========================================================== */
+section[data-testid="stSidebar"] {
+    background: #111827;
+    border-right: 1px solid var(--border);
+}
+
+/* ===========================================================
+   Page Header
+=========================================================== */
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-top: 20px;
+    padding-bottom: 24px;
+}
+
+.page-header-icon {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: linear-gradient(90deg, rgba(124, 58, 237, 0.12), rgba(6, 182, 212, 0.06));
+    box-shadow: 0 6px 18px rgba(2, 6, 23, 0.3);
+}
+
+.page-header-content h1 {
+    font-size: 42px;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+    line-height: 1.05;
+}
+
+.page-header-content .subtitle {
+    margin-top: 6px;
+    font-size: 15px;
+    color: #CBD5E1;
+    margin-bottom: 6px;
+}
+
+.page-header-content .tagline {
+    font-size: 15px;
+    color: #94A3B8;
+}
+
+@media (max-width: 900px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding-bottom: 12px;
+    }
+
+    .page-header-content h1 {
+        font-size: 34px;
+    }
+
+    .page-header {
+        text-align: left;
+    }
+}
+
+/* ===========================================================
+   Hero
+=========================================================== */
+.hero {
+    display: block;
+    padding: 28px 26px;
+    border-radius: 28px;
+    background: rgba(15, 23, 42, 0.82);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
+    margin-bottom: 24px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.9fr;
+    gap: 28px;
+    align-items: center;
+}
+
+.hero-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(59, 130, 246, 0.12);
+    color: #bfdbfe;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 52px;
+    line-height: 1.02;
+    font-weight: 800;
+    color: white;
+}
+
+.hero .subtitle {
+    margin: 0;
+    font-size: 18px;
+    color: #cbd5e1;
+    max-width: 720px;
+}
+
+.hero-tagline {
+    margin: 0;
+    font-size: 15px;
+    color: #94a3b8;
+}
+
+.hero-media {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-card {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 26px;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    box-shadow: 0 24px 50px rgba(15, 23, 42, 0.3);
+}
+
+.hero-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero {
+        padding: 22px 18px;
+    }
+}
+
+/* ===========================================================
+   Cards
+=========================================================== */
+.med-card {
+    background: #111827;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid #334155;
+    margin-bottom: 25px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, .20);
+    transition: .25s;
+}
+
+.med-card:hover {
+    border: 1px solid #2563EB;
+    box-shadow: 0px 12px 30px rgba(37, 99, 235, .25);
+}
+
+/* ===========================================================
+   Section Titles
+=========================================================== */
+.section-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #1E40AF;
+    color: white;
+}
+
+/* ===========================================================
+   Buttons
+=========================================================== */
+.stButton > button {
+    width: 100%;
+    height: 54px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #2563EB, #1D4ED8);
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, #1D4ED8, #1E40AF);
+}
+
+/* ===========================================================
+   Inputs
+=========================================================== */
+.stTextInput input,
+.stNumberInput input {
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.stSelectbox {
+    border-radius: 12px;
+}
+
+/* ===========================================================
+   File Uploader
+=========================================================== */
+[data-testid="stFileUploader"] {
+    border-radius: 16px;
+    border: 2px dashed #475569;
+    padding: 20px;
+    background: #17255430;
+}
+
+/* Hide Streamlit's built-in uploader meta line (file-size / type). */
+[data-testid="stFileUploader"] > div > div:nth-child(2) {
+    font-size: 0 !important;
+    line-height: 0 !important;
+    color: transparent !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* ===========================================================
+   Divider
+=========================================================== */
+hr {
+    border-color: #334155;
+}
+
+/* ===========================================================
+   Footer
+=========================================================== */
+.footer {
+    text-align: center;
+    color: #94A3B8;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+/* ===========================================================
+   REPORT PAGE
+=========================================================== */
+
+.report-card{
+
+    background:#111827;
+
+    border:1px solid #334155;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    margin-bottom:22px;
+
+    box-shadow:0px 8px 22px rgba(0,0,0,.20);
+
+}
+
+.report-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#F8FAFC;
+
+    margin-bottom:18px;
+
+    padding-bottom:12px;
+
+    border-bottom:1px solid #334155;
+
+}
+
+.report-content{
+
+    color:#CBD5E1;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+/* ===========================================================
+   REPORT METRICS
+=========================================================== */
+
+.report-metric{
+
+    background:#111827;
+
+    border:1px solid #334155;
+
+    border-radius:16px;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:.25s;
+
+    margin-bottom:15px;
+
+}
+
+.report-metric:hover{
+
+    border-color:#2563EB;
+
+    transform:translateY(-3px);
+
+}
+
+.report-metric-value{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    color:#60A5FA;
+
+}
+
+.report-metric-title{
+
+    margin-top:8px;
+
+    color:#CBD5E1;
+
+    font-size:15px;
+
+}
+
+/* ===========================================================
+   FINDING CARDS
+=========================================================== */
+
+.finding-card{
+
+    background:#0F172A;
+
+    border-left:6px solid #2563EB;
+
+    border-radius:12px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+}
+
+.finding-card-high{
+
+    border-left-color:#EF4444;
+
+}
+
+.finding-card-medium{
+
+    border-left-color:#F59E0B;
+
+}
+
+.finding-card-low{
+
+    border-left-color:#22C55E;
+
+}
+
+/* ===========================================================
+   MEDICATION CARD
+=========================================================== */
+
+.medication-card{
+
+    background:#0F172A;
+
+    border:1px solid #334155;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+}
+
+/* ===========================================================
+   SOURCE CARD
+=========================================================== */
+
+.source-card{
+
+    background:#0F172A;
+
+    border-radius:12px;
+
+    border:1px solid #334155;
+
+    padding:15px;
+
+    margin-bottom:10px;
+
+}
+
+/* ===========================================================
+   REPORT BUTTONS
+=========================================================== */
+
+.report-action{
+
+    margin-top:25px;
+
+}
+
+/* ===========================================================
+   DISCLAIMER
+=========================================================== */
+
+.report-disclaimer{
+
+    background:#111827;
+
+    border-left:5px solid #2563EB;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    color:#CBD5E1;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    margin-top:30px;
+
+}
