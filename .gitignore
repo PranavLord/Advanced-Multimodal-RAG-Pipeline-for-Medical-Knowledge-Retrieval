@@ -46,23 +46,10 @@ env/
 .ipynb_checkpoints/
 *.ipynb
 
-# Data files
-*.pdf
-*.docx
-*.xlsx
-*.csv
-data/sample_reports/*
-data/sample_images/*
-!data/sample_reports/.gitkeep
-!data/sample_images/.gitkeep
-
 # Logs
 logs/
 *.log
 
-# Model cache
-.cache/
-models/
 
 # Pinecone
 pinecone_index_backup/
